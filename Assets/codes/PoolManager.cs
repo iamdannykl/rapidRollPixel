@@ -27,13 +27,10 @@ public class PoolManager//对象池
         {
             obj = poolDic[prefab][0];//返回List中的第一个
             poolDic[prefab].RemoveAt(0);//移出List中的第一个
-                                        //            Debug.Log(1);
-                                        //Debug.Log(obj.transform.position);
         }
         else
         {
             obj = GameObject.Instantiate(prefab);
-            //            Debug.Log(2);
         }
         obj.SetActive(true);
         obj.transform.SetParent(null);
